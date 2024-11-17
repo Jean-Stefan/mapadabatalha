@@ -1,4 +1,4 @@
-CREATE TABLE `instagram_posts` (
+CREATE TABLE IF NOT EXISTS `instagram_posts` (
 	`id` text PRIMARY KEY NOT NULL,
 	`rhyme_battle_id` text NOT NULL,
 	`instagram_profile_id` text NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE `instagram_posts` (
 	`updated_at` integer NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `instagram_profiles` (
+CREATE TABLE IF NOT EXISTS `instagram_profiles` (
 	`id` text PRIMARY KEY NOT NULL,
 	`rhyme_battle_id` text NOT NULL,
 	`username` text NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE `instagram_profiles` (
 	`updated_at` integer NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `post_analyses` (
+CREATE TABLE IF NOT EXISTS `post_analyses` (
 	`id` text PRIMARY KEY NOT NULL,
 	`instagram_post_id` text NOT NULL,
 	`content` text NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `post_analyses` (
 	`updated_at` integer NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `rhyme_battles` (
+CREATE TABLE IF NOT EXISTS `rhyme_battles` (
 	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
 	`lat` real NOT NULL,
