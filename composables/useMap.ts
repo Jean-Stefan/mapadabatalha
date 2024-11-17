@@ -108,7 +108,7 @@ export function useMap() {
 
     map.value = markRaw(new Map({
       container: ref.value!,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${maptilerToken}`,
+      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=U2r8rW378rl0OijWPkJB`,
       center,
       zoom,
       pitch,
