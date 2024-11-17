@@ -99,16 +99,14 @@ export function useMap() {
     }
   }
 
-  const { public: {
-    maptilerToken,
-  } } = useRuntimeConfig()
+const runtime = useRuntimeConfig()
 
   function initializeMap(options: initializeMapOptions) {
     const { ref, onLoad, onMove, center = BRAZIL_CENTER_COORDINATES, zoom = 1, pitch = 0, language = 'visitor', maxBounds = BRAZIL_MAX_BOUNDS } = options
 
     map.value = markRaw(new Map({
       container: ref.value!,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=U2r8rW378rl0OijWPkJB`,
+      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${runtime.public.maptilerToken}`,
       center,
       zoom,
       pitch,
