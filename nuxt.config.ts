@@ -35,13 +35,13 @@ export default defineNuxtConfig({
     ],
   },
 
-  runtimeConfig: {
+ runtimeConfig: {
     instagramCookieString: process.env.NUXT_INSTAGRAM_COOKIE_STRING,
     tursoConnectionUrl: process.env.NUXT_TURSO_CONNECTION_URL,
     tursoAuthToken: process.env.NUXT_TURSO_AUTH_TOKEN,
-
+    openRouterAuthToken: process.env.NUXT_OPEN_ROUTER_AUTH_TOKEN,
     public: {
-      maptilerToken: process.env.NUXT_MAPTILER_TOKEN, // Maybe create a proxy endpoint in /server since this key is needed in frontend and will be exposed
+      maptilerToken: process.env.NUXT_PUBLIC_MAPTILER_TOKEN,
     },
   },
 
